@@ -1,0 +1,474 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/*
+Layout Page
+*/
+
+/* 12 span grid*/
+.layout{
+  border: 2px darkgrey solid;
+  display: grid;
+grid:
+  "span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12 span12" 1fr
+  "span6 span6 span6 span6 span6 span6 . . . . . ." 1fr
+  ". . . . . span3 span3 span3 . . . ." 1fr
+  ". . . . span1 . . . . . . ." 1fr
+  / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+.span12 {grid-area: span12; background-color: lightgrey;}
+.span6 {grid-area: span6; background-color: lightgrey;}
+.span3 {grid-area: span3; background-color: lightgrey;}
+.span1 {grid-area: span1; background-color: lightgrey;}
+
+/*3x3 Grid*/
+.layout2{
+  width: 90%;
+  height: 300px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  border: 2px solid darkblue;
+}
+
+.x3{
+  border: 2px solid purple;
+  background-color: cadetblue;
+}
+
+/*Holy Grail*/
+.layout3{
+  border: 2px solid lightcoral;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid:
+    "header header header" auto
+    "leftSide body rightSide" 1fr
+    "footer footer footer" auto
+  / auto 1fr auto;
+  gap: 8px;
+}
+.header {grid-area: header; background-color: lightgreen;}
+.leftSide {grid-area: leftSide; background-color: lightsalmon;}
+.body {grid-area: body; background-color: lightblue;}
+.rightSide {grid-area: rightSide; background-color: lightpink;}
+.footer {grid-area: footer; background-color: lightyellow;}
+
+/*Sidebar*/
+.layout4{
+  border: 2px solid darkolivegreen;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid:
+    "sidebar body1" 1fr
+  / auto 1fr;
+  gap: 8px;
+}
+
+.sidebar{grid-area: sidebar; background-color: olivedrab;}
+.body1 {grid-area: body1; background-color: green;}
+
+/*Header Main Footer*/
+.layout5{
+  border: 2px solid lightpink;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid:
+    "header1" auto
+    "main" 1fr
+    "footer1" auto
+  / 1fr;
+  gap: 8px;
+}
+
+.header1 {grid-area: header1; background-color: pink;}
+.main {grid-area: main; background-color: hotpink;}
+.footer1 {grid-area: footer1; background-color: deeppink; color:}
+
+/*Infinite Rows*/
+.layout6{
+  border: 2px solid floralwhite;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  grid-template-rows: repeat (auto-fit, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.infi{
+  border: 2px solid rosybrown;
+  background-color: mistyrose;
+}
+
+/*Infinite Rows with Areas*/
+.layout7{
+  border: 2px solid firebrick;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.col1Last1{
+  grid-column: 1 / -1;
+  background-color: indianred;
+}
+
+/*Flexbox Rows*/
+.layout8{
+  border: 2px solid darkgoldenrod;
+  display: flex;
+  gap: 16px;
+}
+
+.flrow{
+  border: 1px solid gold;
+  background-color: goldenrod;
+}
+
+/*Flexbox Row Wrap*/
+
+.layout9{
+  border: 2px solid green;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/*Flexbox: Fitting the Space*/
+
+.layout10{
+  border: 2px solid slategrey;
+  display: flex;
+  gap: 16px;
+}
+
+.grow1{
+  border: 1px solid darkslateblue;
+  background-color: slateblue;
+  flex-grow: 1;
+}
+
+/*Flexbox: Fit to Remaining Space*/
+
+.layout11{
+  border: 2px solid seagreen;
+  display: flex;
+  gap: 16px;
+}
+
+.grow2{
+  border: 1px solid green;
+  background-color: darkseagreen;
+}
+
+/*Flexbox: Seperate*/
+
+.layout12{
+  border: 2px solid darkslategray;
+  display: flex;
+  gap: 16px;
+}
+
+.marginLeft{
+  margin-left: auto;
+  background-color: gray;
+  border: 1px solid slategrey;
+}
+
+/*Layout Cesar :)*/
+
+.layout13{
+  border: 2px solid violet;
+  width: 99%;
+  height: 300px;
+  display: grid;
+  gap: 8px;
+  grid:
+    "header2 header2 header2" auto
+    "sidebar1 main1 main1" 1fr
+    "footer2 footer2 footer2" auto
+  / auto 1fr auto;
+}
+
+.header2{
+  grid-area: header2;
+  background-color: rebeccapurple;
+  border: 1px solid darkorange;
+}
+.sidebar1{
+  grid-area: sidebar1;
+  background-color: #bf91ee;
+  border: 1px solid #d0b390;
+}
+.main1{
+  grid-area: main1;
+  background-color: #300a57;
+  border: 1px solid #583409;
+}
+.footer2{
+  grid-area: footer2;
+  background-color: #a65cf0;
+  border: 1px solid #e7a85a;
+}
+
+/* Border and background of the whole section. */
+
+#twoD{
+  border: 3px dashed #2feea5;
+  background-color: #c1f0de;;
+}
+
+/*
+Animations Page
+*/
+
+
+/*Background and border of divs*/
+/*You could give all the divs the class "norm" and an id for each just for the transformation. See line 259 for ex.*/
+
+.norm{
+  width: 300px;
+  height: 100px;
+  background-color: #61eabd;
+  border: 2px solid #309a57;
+  margin: 30px;
+}
+
+/*translate*/
+
+.translate{
+  width: 300px;
+  height: 100px;
+  margin: 20px;
+  background-color: #61eabd;
+  border: 2px solid #309a57;
+  transform: translate(50px, 50px);
+}
+
+/*Rotate*/
+
+#rotate{
+  transform: rotate(20deg);
+}
+
+/*Scale*/
+
+.scale{
+  width: 300px;
+  height: 100px;
+  background-color: #61eabd;
+  border: 2px solid #309a57;
+  margin: 200px;
+  transform: scale(2, 3);
+}
+
+/*ScaleX*/
+
+.scaleX{
+  width: 300px;
+  height: 100px;
+  background-color: #61eabd;
+  border: 2px solid #309a57;
+  margin: 150px;
+  transform: scaleX(2);
+}
+
+/*ScaleY*/
+
+.scaleY{
+  width: 300px;
+  height: 100px;
+  background-color: #61eabd;
+  border: 2px solid #309a57;
+  margin: 150px;
+  transform: scaleY(3);
+}
+
+/*Skew*/
+
+.skew{
+  width: 300px;
+  height: 100px;
+  background-color: #61eabd;
+  border: 2px solid #309a57;
+  margin: 100px;
+  transform: skew(20deg, 20deg);
+}
+
+/*SkewX*/
+
+.skewX{
+  width: 300px;
+  height: 100px;
+  background-color: #61eabd;
+  border: 2px solid #309a57;
+  margin: 100px;
+  transform: skewX(20deg);
+}
+
+/*SkewY*/
+
+.skewY{
+  width: 300px;
+  height: 100px;
+  background-color: #61eabd;
+  border: 2px solid #309a57;
+  margin: 100px;
+  transform: skewY(20deg);
+}
+
+/*Matrix*/
+/* matrix(scaleX, skewY, skewX, scaleY, translateX, translateY) */
+
+#matrix1{
+  width: 300px;
+  height: 100px;
+  background-color: #61eabd;
+  border: 2px solid #309a57;
+  margin: 150px;
+  transform: matrix(2, 0.3, 0.5, 1, 30, 0)
+}
+
+#matrix2{
+  width: 300px;
+  height: 100px;
+  background-color: #61eabd;
+  border: 2px solid #309a57;
+  margin: 150px;
+  transform: matrix(-1, 0, -0.3, 1, 0, 0)
+}
+
+/*Rotate in 3D X-Axis*/
+#rotate3DX{
+  transform: rotateX(150deg);
+}
+
+/*Rotate in 3D Y-Axis*/
+#rotate3DY{
+  transform: rotateY(150deg);
+}
+
+/*Rotate in 3D Z-Axis*/
+#rotate3DZ{
+  width: 100px;
+  transform: rotateZ(90deg);
+}
+
+/*Animate it
+.norm:hover{
+  transform: translate3d(20px, 20px, 20px);
+}
+*/
+
+/*Transitions*/
+
+/*Decorating the div*/
+.perry{
+  width: 100px;
+  height: 100px;
+  background-color: #7963ca;
+  outline: 0px solid #a66d2b;
+  transition: width 2s, height 2s, background-color 2s, border 2s, outline 2s;
+  border: 2px solid #ffe14d;
+}
+
+/*Linear*/
+
+#transition:hover{
+  width: 200px;
+  height: 200px;
+  background-color: #3cc790;
+  outline: 5px solid #a66d2b;
+  border: 5px solid #ffe14d;
+}
+
+#linear:hover{
+  transition-timing-function: linear;
+  width: 200px;
+  height: 200px;
+  background-color: #3cc790;
+  outline: 5px solid #a66d2b;
+  border: 5px solid #ffe14d;
+}
+
+/*Ease*/
+
+#ease:hover{
+  transition-timing-function: ease;
+  width: 200px;
+  height: 200px;
+  background-color: #3cc790;
+  outline: 5px solid #a66d2b;
+  border: 5px solid #ffe14d;
+}
+
+/*Ease-In*/
+
+#easeIn:hover{
+  transition-timing-function: ease-in;
+  width: 200px;
+  height: 200px;
+  background-color: #3cc790;
+  outline: 5px solid #a66d2b;
+  border: 5px solid #ffe14d;
+}
+
+/*Ease-Out*/
+
+#easeOut:hover{
+  transition-timing-function: ease-out;
+  width: 200px;
+  height: 200px;
+  background-color: #3cc790;
+  outline: 5px solid #a66d2b;
+  border: 5px solid #ffe14d;
+}
+
+/*Ease-In-Out*/
+
+#easeInOut:hover{
+  transition-timing-function: ease-in-out;
+  width: 200px;
+  height: 200px;
+  background-color: #3cc790;
+  outline: 5px solid #a66d2b;
+  border: 5px solid #ffe14d;
+  transition-delay: 1s;
+}
+
+/*Animations*/
+/*
+@keyframes
+animation-name
+animation-duration
+animation-delay
+animation-iteration-count
+animation-direction
+animation-timing-function
+animation-fill-mode
+animation
+*/
+
+/*The animation code*/
+@keyframes example{
+  from{background-color: #3cc790;}
+  to{background-color: #852ba6;}
+}
+
+/*The element to apply the animation to*/
+.cheeseCake{
+  width: 100px;
+  height: 100px;
+  background-color: #3cc790;
+  animation-name: example;
+  animation-duration: 8s;
+}
