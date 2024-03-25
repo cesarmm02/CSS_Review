@@ -472,3 +472,173 @@ animation
   animation-name: example;
   animation-duration: 8s;
 }
+
+/*Background and Position*/
+
+@keyframes backpos{
+  0%   {background-color:#3cc790; left:0px;}
+  20%  {background-color:#da73f7; left:200px;}
+  40%  {background-color:#f57070; left:400px;}
+  60%  {background-color:#e3ea7b; left:0px;}
+  80% {background-color:#9ff273; left:600px;}
+  100% {background-color:#3cc790; left:0px;}
+} 
+
+.pan{
+  width: 100px;
+  height: 100px;
+  background-color: #3cc790;
+  animation-name: backpos;
+  animation-duration: 8s;
+  position: relative;
+}
+
+/*Delay*/
+
+@keyframes delay{
+  0%   {background-color:#3cc790; left:0px;}
+  20%  {background-color:#da73f7; left:200px;}
+  40%  {background-color:#f57070; left:400px;}
+  60%  {background-color:#e3ea7b; left:0px;}
+  80% {background-color:#9ff273; left:600px;}
+  100% {background-color:#3cc790; left:0px;}
+}
+.giraffe{
+  width: 100px;
+  height: 100px;
+  background-color: #3cc790;
+  animation-name: backpos;
+  animation-duration: 8s;
+  position: relative;
+  animation-delay: 2s;
+}
+
+/*Animation Direction*/
+
+@keyframes direc{
+  0%   {background-color:#3cc790; left:0px;}
+  20%  {background-color:#73ddf7; left:600px;}
+  40%  {background-color:#c0f570; left:400px;}
+  60%  {background-color:#ed0707; left:100px;}
+  80% {background-color:#374e5c; left:500px;}
+  100% {background-color:#9c2198; left:0px;}
+}
+.larp{
+  width: 100px;
+  height: 100px;
+  background-color: #3cc790;
+  animation-name: direc;
+  animation-duration: 8s;
+  position: relative;
+  animation-iteration-count: 3;
+}
+
+/*directions*/
+
+@keyframes reverse{
+  0%   {background-color:#3cc790; left:0px;}
+  20%  {background-color:#73ddf7; left:600px;}
+  40%  {background-color:#c0f570; left:400px;}
+  60%  {background-color:#ed0707; left:100px;}
+  80% {background-color:#374e5c; left:500px;}
+  100% {background-color:#9c2198; left:0px;}
+}
+.oink{
+  width: 100px;
+  height: 100px;
+  background-color: #3cc790;
+  animation-name: reverse;
+  animation-duration: 8s;
+  position: relative;
+  animation-direction: reverse;
+}
+
+/*Speed curves*/
+
+@keyframes curve{
+  from{background-color: #3cc790;}
+  to{background-color: #852ba6;}
+}
+
+#lin{
+  width: 100px;
+  height: 100px;
+  background-color: #3cc790;
+  animation-name: example;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  margin: 10px;
+}
+#eas{
+  width: 100px;
+  height: 100px;
+  background-color: #3cc790;
+  animation-name: example;
+  animation-duration: 8s;
+  animation-timing-function: ease;
+  margin: 10px;
+}
+#ein{
+  width: 100px;
+  height: 100px;
+  background-color: #3cc790;
+  animation-name: example;
+  animation-duration: 8s;
+  animation-timing-function: ease-in;
+  margin: 10px;
+}
+#out{
+  width: 100px;
+  height: 100px;
+  background-color: #3cc790;
+  animation-name: example;
+  animation-duration: 8s;
+  animation-timing-function: ease-out;
+  margin: 10px;
+}
+#eio{
+  width: 100px;
+  height: 100px;
+  background-color: #3cc790;
+  animation-name: example;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  margin: 10px;
+}
+
+/*Animation Fill-Mode*/
+@keyframes fill{
+  from{background-color: #80f4c6;}
+  to{background-color: #e16b09;}
+}
+
+.phil{
+  width: 100px;
+  height: 100px;
+  background-color: #80f4c6;
+  animation-name: fill;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+  margin: 10px;
+}
+
+/*Animation shorthand*/
+/*animation: animation name, duration, speed curve, delay, iterations, direction*/
+
+@keyframes ani{
+  0%   {background-color:#3cc790; left:0px;}
+  20%  {background-color:#da73f7; left:200px;}
+  40%  {background-color:#f57070; left:400px;}
+  60%  {background-color:#e3ea7b; left:0px;}
+  80% {background-color:#9ff273; left:600px;}
+  100% {background-color:#3cc790; left:0px;}
+}
+
+.platypus{
+  width: 100px;
+  height: 100px;
+  background-color: #3cc790;
+  position: relative;
+  animation: ani 8s linear 2s infinite alternate-reverse;
+}
