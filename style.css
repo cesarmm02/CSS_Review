@@ -513,7 +513,7 @@ animation
   animation-delay: 2s;
 }
 
-/*Animation Direction*/
+/*Iteration Count*/
 
 @keyframes direc{
   0%   {background-color:#3cc790; left:0px;}
@@ -533,7 +533,7 @@ animation
   animation-iteration-count: 3;
 }
 
-/*directions*/
+/*Animation Direction*/
 
 @keyframes reverse{
   0%   {background-color:#3cc790; left:0px;}
@@ -627,18 +627,18 @@ animation
 /*animation: animation name, duration, speed curve, delay, iterations, direction*/
 
 @keyframes ani{
-  0%   {background-color:#3cc790; left:0px;}
-  20%  {background-color:#da73f7; left:200px;}
-  40%  {background-color:#f57070; left:400px;}
-  60%  {background-color:#e3ea7b; left:0px;}
-  80% {background-color:#9ff273; left:600px;}
-  100% {background-color:#3cc790; left:0px;}
+  0%   {background-color:#a5fdda; left:0px;}
+  20%  {background-color:#0d00c7; left:100px;}
+  40%  {background-color:#fff94d; left:800px;}
+  60%  {background-color:#00c74c; left:200px;}
+  80% {background-color:#c752bd; left:500px;}
+  100% {background-color:#ff0000; left:0px;}
 }
 
 .platypus{
   width: 100px;
   height: 100px;
-  background-color: #3cc790;
+  background-color: #ff0000;
   position: relative;
-  animation: ani 8s linear 2s infinite alternate-reverse;
+  animation: ani 8s ease 2s infinite alternate-reverse;
 }
